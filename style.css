@@ -1,0 +1,122 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Allow scroll by removing fixed height */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px; /* Add padding instead of aligning center */
+    min-height: 100vh;
+    overflow-y: auto; /* Enable vertical scroll if needed */
+}
+
+/* Make container responsive */
+.container {
+    width: 100%;
+    max-width: 440px;
+    padding: 26px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Headings */
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #ffcc70;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    flex: 1 1 100%;
+    padding: 12px;
+    background-color: #ffffff10;
+    border: 1px solid #ffffff30;
+    border-radius: 8px;
+    color: #fefefe;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #00d4ff;
+    outline: none;
+    background-color: #ffffff15;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    transform: scale(1.05);
+}
+
+/* Expense List */
+#expense-list {
+    list-style: none;
+    padding: 0;
+}
+
+#expense-list li {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: #ffffff;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#expense-list li div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Total Section */
+#total {
+    text-align: right;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #a3e4d7;
+}
+
+/* Hidden Utility */
+.hidden {
+    display: none;
+}
